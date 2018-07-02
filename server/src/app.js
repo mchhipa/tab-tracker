@@ -17,6 +17,13 @@ app.get('/status', (req, res) => {
     message: 'Hello World!'
   })
 })
+app.post('/register', (req, res) => {
+  console.log(req.body)
+  res.send({
+    message: `Hello ${req.body.email} you are now registered`
+  })
+})
+
 app.listen(port, () => {
   console.log(`starting server on port ${port}`)
 })
